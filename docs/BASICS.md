@@ -74,3 +74,10 @@
 - Symbols like emoji can have multiple runes. Even sometimes a U+200D zero-width joiner combining 2 emojis - 1 glyph.
 - Go handles wide variety of Unicode characters in strings.
 
+### Variable Declaration
+
+- You can declare outside a function, you cannot declare and assign it outside and use it inside a function.
+
+### Functions
+
+- Main does not need to be below all other helper functions.
