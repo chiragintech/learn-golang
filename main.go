@@ -1,14 +1,19 @@
 package main
 
 import (
-	"fmt";
-	"learn-golang/fundamentals"
+	"fmt"
+	// "io"
 	"learn-golang/cards"
 	"learn-golang/evenodd"
+	"learn-golang/fundamentals"
+	httpstatuschecker "learn-golang/http_status_checker"
+	"learn-golang/interfaces"
+	"learn-golang/maps"
 	"learn-golang/structs"
+	// "os"
 )
 
-func main(){
+func main() {
 	fmt.Println("Hello world!")
 	fundamentals.Introduction()
 	fundamentals.SwitchCase("linux")
@@ -38,5 +43,28 @@ func main(){
 	evenodd.IsEvenOrOdd()
 
 	structs.CreatePerson()
+	structs.PointerGotcha()
 
+	maps.CreateMap()
+
+	eb := interfaces.EnglishBot{}
+	sb := interfaces.SpanishBot{}
+
+	interfaces.PrintGreeting(eb)
+	interfaces.PrintGreeting(sb)
+
+	// interfaces.SendRequest()
+
+	interfaces.Example()
+
+	// fmt.Println(os.Args[1]) // gets the filename
+
+	// f, err := os.Open(os.Args[1])
+	// if err != nil {
+	// 	fmt.Println("Error:", err)
+	// 	os.Exit(1)
+	// }
+	// io.Copy(os.Stdout, f)
+
+	httpstatuschecker.PrintStatus()
 }
